@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hoc/Aux.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,17 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectId" id="1XI0DYpy6o6hpvwG0dxybe8KttP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -37,8 +27,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -122,14 +115,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="747" y="133" width="865" height="925" key="CommitChangelistDialog2" timestamp="1581825994141">
-      <screen x="70" y="27" width="2490" height="1413" />
+    <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581835071785">
+      <screen x="70" y="27" width="1530" height="873" />
     </state>
+    <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
+    <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2" timestamp="1581879308189">
+      <screen x="70" y="27" width="1530" height="873" />
+    </state>
+    <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
     <state x="747" y="133" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581825994141" />
-    <state x="2560" y="0" width="1910" height="1080" key="DiffContextDialog" timestamp="1581810861691">
-      <screen x="2560" y="0" width="1920" height="1080" />
+    <state x="70" y="21" width="1530" height="873" key="DiffContextDialog" timestamp="1581879366420">
+      <screen x="70" y="27" width="1530" height="873" />
     </state>
+    <state x="70" y="21" width="1530" height="873" key="DiffContextDialog/70.27.1530.873@70.27.1530.873" timestamp="1581879366420" />
     <state x="2560" y="0" width="1910" height="1080" key="DiffContextDialog/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581810861691" />
     <state x="3018" y="491" width="424" height="491" key="FileChooserDialogImpl" timestamp="1580726271458">
       <screen x="1920" y="0" width="2560" height="1440" />
@@ -139,6 +138,10 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3115" y="262" width="1017" height="587" key="GitRewordDialog/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812138960" />
+    <state x="666" y="73" width="314" height="708" key="RollbackChangesDialog" timestamp="1581826296793">
+      <screen x="70" y="27" width="1530" height="873" />
+    </state>
+    <state x="666" y="73" width="314" height="708" key="RollbackChangesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581826296793" />
     <state x="3009" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1581812113835">
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
@@ -155,9 +158,10 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3168" y="106" width="704" height="867" key="find.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581813681808" />
-    <state x="3183" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1581810719799">
-      <screen x="2560" y="0" width="1920" height="1080" />
+    <state x="566" y="220" width="672" height="549" key="search.everywhere.popup" timestamp="1581833306369">
+      <screen x="70" y="27" width="1530" height="873" />
     </state>
+    <state x="566" y="220" width="672" height="549" key="search.everywhere.popup/70.27.1530.873@70.27.1530.873" timestamp="1581833306369" />
     <state x="3183" y="239" width="672" height="678" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581810719799" />
   </component>
 </project>
