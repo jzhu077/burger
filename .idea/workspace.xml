@@ -122,10 +122,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2" timestamp="1581812035332">
-      <screen x="2560" y="0" width="1920" height="1080" />
+    <state x="747" y="133" width="865" height="925" key="CommitChangelistDialog2" timestamp="1581825994141">
+      <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
+    <state x="747" y="133" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581825994141" />
     <state x="2560" y="0" width="1910" height="1080" key="DiffContextDialog" timestamp="1581810861691">
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
