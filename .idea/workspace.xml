@@ -51,7 +51,7 @@
       <updated>1580718181144</updated>
       <workItem from="1580718182369" duration="551000" />
       <workItem from="1580718734159" duration="7494000" />
-      <workItem from="1581810431719" duration="977000" />
+      <workItem from="1581810431719" duration="1514000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -74,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581811022385</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Setup CSS module and change app title">
+      <created>1581811484229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581811484229</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,13 +91,14 @@
     <MESSAGE value="Add prettier and use es6 in tsconfig" />
     <MESSAGE value="commit untracked IDE files" />
     <MESSAGE value="Eject config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eject config files" />
+    <MESSAGE value="Setup CSS module and change app title" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup CSS module and change app title" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2" timestamp="1581811022293">
+    <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2" timestamp="1581811973306">
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
-    <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581811022293" />
+    <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581811973306" />
     <state x="2560" y="0" width="1910" height="1080" key="DiffContextDialog" timestamp="1581810861691">
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
