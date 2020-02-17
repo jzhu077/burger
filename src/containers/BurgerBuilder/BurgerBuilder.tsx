@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Aux from "../../hoc/Aux";
-import * as style from "./BurgerBuilder.css";
+import Burger from "../../Burger/Burger";
 
 class BurgerBuilder extends Component {
   render(): React.ReactElement<any> {
     return (
       <Aux>
-        <div className={style.test}>Burger</div>
+        <Burger />
         <div>Build Controls</div>
       </Aux>
     );

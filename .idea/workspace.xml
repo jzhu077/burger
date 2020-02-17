@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }">
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/LayoutStyle.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.css" afterDir="false" />
+    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Burger/Burger.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Burger/Burger.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,7 +32,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Burger" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,6 +46,14 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Burger/BurgerIngredient" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Burger" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -54,7 +68,7 @@
       <workItem from="1580718182369" duration="551000" />
       <workItem from="1580718734159" duration="7494000" />
       <workItem from="1581810431719" duration="5241000" />
-      <workItem from="1581964164323" duration="1946000" />
+      <workItem from="1581964164323" duration="3962000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -91,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581812035381</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add styled component">
+      <created>1581966137517</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581966137517</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,19 +138,21 @@
     <MESSAGE value="Eject config files" />
     <MESSAGE value="Setup CSS module and change app title" />
     <MESSAGE value="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }" />
+    <MESSAGE value="Add styled component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add styled component" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581835071785">
-      <screen x="70" y="27" width="1530" height="873" />
+    <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581967034826">
+      <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
-    <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2" timestamp="1581879308189">
-      <screen x="70" y="27" width="1530" height="873" />
+    <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581967034826" />
+    <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2" timestamp="1581966137403">
+      <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
-    <state x="747" y="133" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581825994141" />
+    <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581966137403" />
     <state x="70" y="21" width="1530" height="873" key="DiffContextDialog" timestamp="1581879366420">
       <screen x="70" y="27" width="1530" height="873" />
     </state>
@@ -151,10 +174,11 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3009" y="175" width="1022" height="737" key="SettingsEditor/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812113835" />
-    <state x="3115" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1581811026400">
-      <screen x="2560" y="0" width="1920" height="1080" />
+    <state x="790" y="388" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1581966144563">
+      <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="3115" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581811026400" />
+    <state x="790" y="388" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581966144563" />
     <state x="2770" y="388" width="920" height="698" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580721487697">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -163,11 +187,11 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3168" y="106" width="704" height="867" key="find.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581813681808" />
-    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup" timestamp="1581965962067">
+    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup" timestamp="1581966904074">
       <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="566" y="220" width="672" height="549" key="search.everywhere.popup/70.27.1530.873@70.27.1530.873" timestamp="1581833306369" />
     <state x="3183" y="239" width="672" height="678" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581810719799" />
-    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581965962067" />
+    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581966904074" />
   </component>
 </project>
