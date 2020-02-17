@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }">
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/LayoutStyle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,7 @@
       <workItem from="1580718182369" duration="551000" />
       <workItem from="1580718734159" duration="7494000" />
       <workItem from="1581810431719" duration="5241000" />
+      <workItem from="1581964164323" duration="1946000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -99,7 +102,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -158,10 +163,11 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3168" y="106" width="704" height="867" key="find.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581813681808" />
-    <state x="566" y="220" width="672" height="549" key="search.everywhere.popup" timestamp="1581833306369">
-      <screen x="70" y="27" width="1530" height="873" />
+    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup" timestamp="1581965962067">
+      <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="566" y="220" width="672" height="549" key="search.everywhere.popup/70.27.1530.873@70.27.1530.873" timestamp="1581833306369" />
     <state x="3183" y="239" width="672" height="678" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581810719799" />
+    <state x="877" y="339" width="1094" height="889" key="search.everywhere.popup/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581965962067" />
   </component>
 </project>

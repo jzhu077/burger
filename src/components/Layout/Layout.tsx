@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import * as style from "./Layout.css";
+import { Content } from "./LayoutStyle";
 
 const Layout = (props: any) => (
   <Fragment>
     <div> Tool bar, sideDrawer , Backdrop</div>
-    <main className={style.content}> {props.children} </main>
+    <Content> {props.children} </Content>
   </Fragment>
 );
 
