@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Burger/Burger.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/Burger.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.tsx" afterDir="false" />
+    <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="Handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Burger/Burger.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/Burger.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Burger/Burger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/Burger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/LayoutStyle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/LayoutStyle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,8 @@
       <workItem from="1580718182369" duration="551000" />
       <workItem from="1580718734159" duration="7494000" />
       <workItem from="1581810431719" duration="5241000" />
-      <workItem from="1581964164323" duration="3962000" />
+      <workItem from="1581964164323" duration="4608000" />
+      <workItem from="1582184743919" duration="1460000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -112,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581966137517</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Static burger with ingredients">
+      <created>1581968169735</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581968169735</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +147,8 @@
     <MESSAGE value="Setup CSS module and change app title" />
     <MESSAGE value="Fix css loader error&#10;&#10;ValidationError: Invalid options object. CSS Loader has been initialized using&#10;an options object that does not match the API schema.&#10; - options has an unknown property 'localIdentName'. These properties are valid:&#10;   object { url?, import?, modules?, sourceMap?, importLoaders?, &#10;   localsConvention?, onlyLocals?, esModule? }" />
     <MESSAGE value="Add styled component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add styled component" />
+    <MESSAGE value="Static burger with ingredients" />
+    <option name="LAST_COMMIT_MESSAGE" value="Static burger with ingredients" />
   </component>
   <component name="WindowStateProjectService">
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581967034826">
@@ -147,12 +156,13 @@
     </state>
     <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581967034826" />
-    <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2" timestamp="1581966137403">
-      <screen x="70" y="27" width="2490" height="1413" />
+    <state x="2616" y="108" width="1242" height="1069" key="CommitChangelistDialog2" timestamp="1582186088807">
+      <screen x="1920" y="0" width="2560" height="1440" />
     </state>
+    <state x="2616" y="108" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582186088807" />
     <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
-    <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581966137403" />
+    <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968169688" />
     <state x="70" y="21" width="1530" height="873" key="DiffContextDialog" timestamp="1581879366420">
       <screen x="70" y="27" width="1530" height="873" />
     </state>
@@ -174,11 +184,11 @@
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="3009" y="175" width="1022" height="737" key="SettingsEditor/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812113835" />
-    <state x="790" y="388" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1581966144563">
+    <state x="790" y="388" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1581968172837">
       <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="3115" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581811026400" />
-    <state x="790" y="388" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581966144563" />
+    <state x="790" y="388" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968172837" />
     <state x="2770" y="388" width="920" height="698" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580721487697">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
