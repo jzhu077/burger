@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/burger.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +28,7 @@
   <component name="ProjectId" id="1XI0DYpy6o6hpvwG0dxybe8KttP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -70,6 +72,7 @@
       <workItem from="1581810431719" duration="5241000" />
       <workItem from="1581964164323" duration="4608000" />
       <workItem from="1582184743919" duration="2446000" />
+      <workItem from="1582221059160" duration="3313000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -127,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582186276855</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Handling empty burger ingredient">
+      <created>1582221270027</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582221270028</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,10 +174,10 @@
     </state>
     <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581967034826" />
-    <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2" timestamp="1582186276766">
+    <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2" timestamp="1582221269906">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582186276766" />
+    <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582221269906" />
     <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
     <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968169688" />
@@ -188,9 +198,10 @@
       <screen x="70" y="27" width="1530" height="873" />
     </state>
     <state x="666" y="73" width="314" height="708" key="RollbackChangesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581826296793" />
-    <state x="3009" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1581812113835">
-      <screen x="2560" y="0" width="1920" height="1080" />
+    <state x="2519" y="233" width="1022" height="737" key="SettingsEditor" timestamp="1582223664600">
+      <screen x="1920" y="0" width="2560" height="1440" />
     </state>
+    <state x="2519" y="233" key="SettingsEditor/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582223664600" />
     <state x="3009" y="175" width="1022" height="737" key="SettingsEditor/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812113835" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1582186954996">
       <screen x="1920" y="0" width="2560" height="1440" />
