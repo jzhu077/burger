@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <workItem from="1582221059160" duration="3313000" />
       <workItem from="1582258359253" duration="824000" />
       <workItem from="1582491117070" duration="27000" />
-      <workItem from="1582693160522" duration="126000" />
+      <workItem from="1582693160522" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582259150366</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add order button styles">
+      <created>1582693304840</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582693304840</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +186,8 @@
     <MESSAGE value="Handling empty burger ingredient" />
     <MESSAGE value="Add total price to burger builder" />
     <MESSAGE value="Add order now button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add order now button" />
+    <MESSAGE value="Add order button styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add order button styles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581967034826">
@@ -187,11 +195,11 @@
     </state>
     <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581967034826" />
-    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2" timestamp="1582259150326">
+    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2" timestamp="1582693304764">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582221269906" />
-    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582259150326" />
+    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582693304764" />
     <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
     <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968169688" />
