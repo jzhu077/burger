@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Aux from "../../hoc/Aux";
-import Burger from "../../Burger/Burger";
-import BuildControls from "../../Burger/BuildControls/BuildControls";
+import Burger from "../../components/Burger/Burger";
+import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import { IIngredients } from "../../types/burger";
 import * as _ from "lodash";
+import Modal from "../../components/UI/Modal/Modal";
+import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -21,8 +23,13 @@ class BurgerBuilder extends Component {
       meat: 0
     } as IIngredients,
     totalPrice: 0,
-    purchasable: false
+    purchasable: false,
+    showOrder: false
   };
+
+  updateShowOrder() {
+    this.setState({ purchasing: true });
+  }
 
   updatePurchaseState(ingredients: IIngredients) {
     const sum = Object.keys(ingredients)
@@ -77,6 +84,9 @@ class BurgerBuilder extends Component {
 
     return (
       <Aux>
+        <Modal>
+          <OrderSummary ingredients={this.state.ingredients}></OrderSummary>
+        </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredient}
