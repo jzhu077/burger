@@ -27,9 +27,13 @@ class BurgerBuilder extends Component {
     showOrder: false
   };
 
-  updateShowOrder() {
-    this.setState({ purchasing: true });
-  }
+  showOrder = () => {
+    this.setState({ showOrder: true });
+  };
+
+  closeModal = () => {
+    this.setState({ showOrder: false });
+  };
 
   updatePurchaseState(ingredients: IIngredients) {
     const sum = Object.keys(ingredients)
@@ -84,7 +88,7 @@ class BurgerBuilder extends Component {
 
     return (
       <Aux>
-        <Modal>
+        <Modal showOrder={this.state.showOrder} closeModal={this.closeModal}>
           <OrderSummary ingredients={this.state.ingredients}></OrderSummary>
         </Modal>
         <Burger ingredients={this.state.ingredients} />
@@ -94,6 +98,7 @@ class BurgerBuilder extends Component {
           disabled={disableInfo}
           price={this.state.totalPrice}
           purchasable={this.state.purchasable}
+          ordered={this.showOrder}
         />
       </Aux>
     );

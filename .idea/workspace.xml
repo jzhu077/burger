@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbbfaf5e-bc64-4b06-aa8b-5b1f8c9c86bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Burger/OrderSummary/OrderSummary.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControl/BuildControl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControl/BuildControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControl/BuildControl.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BuildControls/BuildControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/Burger.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/Burger.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/Burger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/Burger.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BurgerIngredient/BurgerIngredient.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Burger/BurgerIngredient/BurgerIngredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BurgerIngredient/BurgerIngredient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vistamanager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -82,7 +75,8 @@
       <workItem from="1582221059160" duration="3313000" />
       <workItem from="1582258359253" duration="824000" />
       <workItem from="1582491117070" duration="27000" />
-      <workItem from="1582693160522" duration="2829000" />
+      <workItem from="1582693160522" duration="2862000" />
+      <workItem from="1582742366843" duration="2226000" />
     </task>
     <task id="LOCAL-00001" summary="Add prettier and use es6 in tsconfig">
       <created>1581723875007</created>
@@ -175,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582694211964</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add modal to show user order">
+      <created>1582696071887</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582696071887</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,19 +207,24 @@
     <MESSAGE value="Add order now button" />
     <MESSAGE value="Add order button styles" />
     <MESSAGE value="Only enable the order button when it's purchasable&#10;&#10;i.e the burger ingredient is not empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="Only enable the order button when it's purchasable&#10;&#10;i.e the burger ingredient is not empty" />
+    <MESSAGE value="Add modal to show user order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add modal to show user order" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2562" y="341" width="625" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582744015871">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2562" y="341" width="625" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582744015871" />
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581967034826">
       <screen x="70" y="27" width="2490" height="1413" />
     </state>
     <state x="571" y="190" width="524" height="515" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1530.873@70.27.1530.873" timestamp="1581835071785" />
     <state x="885" y="291" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581967034826" />
-    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2" timestamp="1582694211918">
+    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2" timestamp="1582696071834">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2616" y="108" width="865" height="925" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582221269906" />
-    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582694211918" />
+    <state x="2442" y="81" width="1129" height="694" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582696071834" />
     <state x="218" y="80" width="1215" height="677" key="CommitChangelistDialog2/70.27.1530.873@70.27.1530.873" timestamp="1581879308189" />
     <state x="3082" y="81" width="865" height="925" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581812035332" />
     <state x="747" y="133" width="1242" height="1069" key="CommitChangelistDialog2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968169688" />
@@ -249,11 +255,11 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582186954996" />
-    <state x="2475" y="276" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582694214843">
+    <state x="2475" y="276" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582696074375">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2660" y="368" key="Vcs.Push.Dialog.v2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1582186280030" />
-    <state x="2475" y="276" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582694214843" />
+    <state x="2475" y="276" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582696074375" />
     <state x="3115" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@2560.0.1920.1080" timestamp="1581811026400" />
     <state x="790" y="388" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.2490.1413/2560.0.1920.1080@70.27.2490.1413" timestamp="1581968172837" />
     <state x="2770" y="388" width="920" height="698" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580721487697">
