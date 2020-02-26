@@ -27,6 +27,14 @@ class BurgerBuilder extends Component {
     showOrder: false
   };
 
+  orderCancelled = () => {
+    this.setState({ showOrder: false });
+  };
+
+  orderContinue = () => {
+    alert("Continue");
+  };
+
   showOrder = () => {
     this.setState({ showOrder: true });
   };
@@ -89,7 +97,12 @@ class BurgerBuilder extends Component {
     return (
       <Aux>
         <Modal showOrder={this.state.showOrder} closeModal={this.closeModal}>
-          <OrderSummary ingredients={this.state.ingredients}></OrderSummary>
+          <OrderSummary
+            price={this.state.totalPrice}
+            orderCancelled={this.orderCancelled}
+            orderContinue={this.orderContinue}
+            ingredients={this.state.ingredients}
+          ></OrderSummary>
         </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
