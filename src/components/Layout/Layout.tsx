@@ -3,12 +3,31 @@ import { Content } from "./LayoutStyle";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 
-const Layout = (props: any) => (
-  <Fragment>
-    <Toolbar />
-    <SideDrawer />
-    <Content> {props.children} </Content>
-  </Fragment>
-);
+class Layout extends React.Component {
+  state = {
+    showSideDrawer: false
+  };
+
+  sideDrawerClosedHandler = () => [this.setState({ showSideDrawer: false })];
+
+  sideDrawerToggleHandler = () => [
+    this.setState((prevState: any) => ({
+      showSideDrawer: !prevState.showSideDrawer
+    }))
+  ];
+
+  render() {
+    return (
+      <Fragment>
+        <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
+        <SideDrawer
+          open={this.state.showSideDrawer}
+          closed={this.sideDrawerClosedHandler}
+        />
+        <Content> {this.props.children} </Content>
+      </Fragment>
+    );
+  }
+}
 
 export default Layout;
