@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
-import Layout from "./components/Layout/Layout";
+import Layout from "./hoc/Layout/Layout";
 
 const App = () => {
   return (
