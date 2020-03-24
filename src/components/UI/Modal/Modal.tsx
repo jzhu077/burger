@@ -19,4 +19,17 @@ const Modal = (props: any) => {
   );
 };
 
-export default Modal;
+// This is to improve the performance by checking if the previous showOrder is the same  as the next showOrder.
+
+// The same thing can be done using a class component named PureComponent that does a shallow comparison between the
+// new and the old props.
+
+// However the in this case, since we only care about one attribute of props, showOrder, in the class component
+// using shouldComponentUpdate (nextProps, nextState) {return nextProps.showOrder !== this.props,showOrder}
+// should be used in stead.
+
+function areEqual(prevProps: any, nextProps: any) {
+  return prevProps.showOrder === nextProps.showOrder;
+}
+
+export default React.memo(Modal, areEqual);
