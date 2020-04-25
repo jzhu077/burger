@@ -8,6 +8,7 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import { Axios } from "../../axios";
 import { Spinner } from "../../components/UI/Spinner/Spinner";
+import {ErrorHandler} from "../../hoc/ErrorHandler/ErrorHandler";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -128,7 +129,7 @@ class BurgerBuilder extends Component {
     }
     return (
       <Auxiliary>
-        <Modal showOrder={this.state.showOrder} closeModal={this.closeModal}>
+        <Modal show={this.state.showOrder} closeModal={this.closeModal}>
           {orderSummary}
         </Modal>
         <Burger ingredients={this.state.ingredients} />
@@ -145,4 +146,4 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default BurgerBuilder;
+export default ErrorHandler(BurgerBuilder, Axios);
