@@ -6,6 +6,7 @@ import { IIngredients } from "../../types/burger";
 import * as _ from "lodash";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
+import { Axios } from "../../axios";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -32,7 +33,25 @@ class BurgerBuilder extends Component {
   };
 
   orderContinue = () => {
-    alert("Continue");
+    const order = {
+      ingredients: this.state.ingredients,
+      price: this.state.totalPrice,
+      customer: {
+        name: "JY",
+        address: "fake address",
+        email: "a@a.com"
+      },
+      deliveryMethod: "fast"
+    };
+    Axios.post("/orders.json", order)
+      .then(resp => {
+        console.log(resp);
+        this.closeModal()
+      })
+      .catch(err => {
+        console.log(err);
+        this.closeModal()
+      });
   };
 
   showOrder = () => {
