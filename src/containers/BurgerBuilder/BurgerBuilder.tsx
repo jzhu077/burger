@@ -7,6 +7,7 @@ import * as _ from "lodash";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import { Axios } from "../../axios";
+import { Spinner } from "../../components/UI/Spinner/Spinner";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -25,7 +26,8 @@ class BurgerBuilder extends Component {
     } as IIngredients,
     totalPrice: 0,
     purchasable: false,
-    showOrder: false
+    showOrder: false,
+    loading: false
   };
 
   orderCancelled = () => {
@@ -33,6 +35,7 @@ class BurgerBuilder extends Component {
   };
 
   orderContinue = () => {
+    this.setState({ loading: true });
     const order = {
       ingredients: this.state.ingredients,
       price: this.state.totalPrice,
@@ -45,12 +48,11 @@ class BurgerBuilder extends Component {
     };
     Axios.post("/orders.json", order)
       .then(resp => {
-        console.log(resp);
-        this.closeModal()
+        this.setState({ loading: false, showOrder: false });
       })
       .catch(err => {
-        console.log(err);
-        this.closeModal()
+        console.error(err);
+        this.setState({ loading: false, showOrder: false });
       });
   };
 
@@ -113,15 +115,21 @@ class BurgerBuilder extends Component {
       disableInfo[key] = this.state.ingredients[key as keyof IIngredients] <= 0;
     }
 
+    let orderSummary = (
+      <OrderSummary
+        price={this.state.totalPrice}
+        orderCancelled={this.orderCancelled}
+        orderContinue={this.orderContinue}
+        ingredients={this.state.ingredients}
+      />
+    );
+    if (this.state.loading) {
+      orderSummary = <Spinner />;
+    }
     return (
       <Auxiliary>
         <Modal showOrder={this.state.showOrder} closeModal={this.closeModal}>
-          <OrderSummary
-            price={this.state.totalPrice}
-            orderCancelled={this.orderCancelled}
-            orderContinue={this.orderContinue}
-            ingredients={this.state.ingredients}
-          ></OrderSummary>
+          {orderSummary}
         </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls

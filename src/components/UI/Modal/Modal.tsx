@@ -28,8 +28,8 @@ const Modal = (props: any) => {
 // using shouldComponentUpdate (nextProps, nextState) {return nextProps.showOrder !== this.props,showOrder}
 // should be used in stead.
 
-function areEqual(prevProps: any, nextProps: any) {
-  return prevProps.showOrder === nextProps.showOrder;
+function shouldUseMemory(prevProps: any, nextProps: any) {
+  return prevProps.showOrder === nextProps.showOrder && nextProps.children === prevProps.children;
 }
 
-export default React.memo(Modal, areEqual);
+export default React.memo(Modal, shouldUseMemory);
