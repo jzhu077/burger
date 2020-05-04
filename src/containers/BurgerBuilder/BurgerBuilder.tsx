@@ -8,7 +8,7 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import { Axios } from "../../axios";
 import { Spinner } from "../../components/UI/Spinner/Spinner";
-import {ErrorHandler} from "../../hoc/ErrorHandler/ErrorHandler";
+import { ErrorHandler } from "../../hoc/ErrorHandler/ErrorHandler";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -28,8 +28,20 @@ class BurgerBuilder extends Component {
     totalPrice: 0,
     purchasable: false,
     showOrder: false,
-    loading: false
+    loading: false,
+    hasError: false
   };
+
+  componentDidMount(): void {
+    this.setState({ loading: true });
+    Axios.get("/ingredients.jso")
+      .then(resp => {
+        this.setState({ ingredients: resp.data, loading: false });
+      })
+      .catch(err => {
+        this.setState({ hasError: true });
+      });
+  }
 
   orderCancelled = () => {
     this.setState({ showOrder: false });
@@ -127,20 +139,29 @@ class BurgerBuilder extends Component {
     if (this.state.loading) {
       orderSummary = <Spinner />;
     }
+
+    let burger = this.state.hasError ? <p>Network Error</p> : <Spinner />;
+    if (!this.state.loading) {
+      burger = (
+        <Auxiliary>
+          <Burger ingredients={this.state.ingredients} />
+          <BuildControls
+            ingredientAdded={this.addIngredient}
+            ingredientRemoved={this.removeIngredient}
+            disabled={disableInfo}
+            price={this.state.totalPrice}
+            purchasable={this.state.purchasable}
+            ordered={this.showOrder}
+          />
+        </Auxiliary>
+      );
+    }
     return (
       <Auxiliary>
         <Modal show={this.state.showOrder} closeModal={this.closeModal}>
           {orderSummary}
         </Modal>
-        <Burger ingredients={this.state.ingredients} />
-        <BuildControls
-          ingredientAdded={this.addIngredient}
-          ingredientRemoved={this.removeIngredient}
-          disabled={disableInfo}
-          price={this.state.totalPrice}
-          purchasable={this.state.purchasable}
-          ordered={this.showOrder}
-        />
+        {burger}
       </Auxiliary>
     );
   }
