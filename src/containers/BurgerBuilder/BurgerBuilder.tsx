@@ -34,7 +34,7 @@ class BurgerBuilder extends Component {
 
   componentDidMount(): void {
     this.setState({ loading: true });
-    Axios.get("/ingredients.jso")
+    Axios.get("/ingredients.json")
       .then(resp => {
         this.setState({ ingredients: resp.data, loading: false });
       })
