@@ -9,6 +9,7 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import { Axios } from "../../axios";
 import { Spinner } from "../../components/UI/Spinner/Spinner";
 import { ErrorHandler } from "../../hoc/ErrorHandler/ErrorHandler";
+import { RouteComponentProps } from "react-router-dom";
 
 const INGREDIENT_PRICES = {
   salad: 0.02,
@@ -48,25 +49,39 @@ class BurgerBuilder extends Component {
   };
 
   orderContinue = () => {
-    this.setState({ loading: true });
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: "JY",
-        address: "fake address",
-        email: "a@a.com"
-      },
-      deliveryMethod: "fast"
-    };
-    Axios.post("/orders.json", order)
-      .then(resp => {
-        this.setState({ loading: false, showOrder: false });
-      })
-      .catch(err => {
-        console.error(err);
-        this.setState({ loading: false, showOrder: false });
-      });
+    // this.setState({ loading: true });
+    // const order = {
+    //   ingredients: this.state.ingredients,
+    //   price: this.state.totalPrice,
+    //   customer: {
+    //     name: "JY",
+    //     address: "fake address",
+    //     email: "a@a.com"
+    //   },
+    //   deliveryMethod: "fast"
+    // };
+    // Axios.post("/orders.json", order)
+    //   .then(resp => {
+    //     this.setState({ loading: false, showOrder: false });
+    //   })
+    //   .catch(err => {
+    //     console.error(err);
+    //     this.setState({ loading: false, showOrder: false });
+    //   });
+    const queryParams: string[] = [];
+    for (let key in this.state.ingredients) {
+      queryParams.push(
+        encodeURIComponent(key) +
+          "=" +
+          encodeURIComponent(this.state.ingredients[key as keyof IIngredients])
+      );
+    }
+    const queryString = queryParams.join("&");
+
+    (this.props as RouteComponentProps).history.push({
+      pathname: "/checkout",
+      search: '?'+queryString
+    });
   };
 
   showOrder = () => {
