@@ -5,7 +5,7 @@ import Backdrop from "../Backdrop/Backdrop";
 const Modal = (props: any) => {
   return (
     <Fragment>
-      <Backdrop show={props.show} clicked={props.closeModal}/>
+      <Backdrop show={props.show} clicked={props.closeModal} />
       <div
         className={styles.Modal}
         style={{
@@ -29,7 +29,10 @@ const Modal = (props: any) => {
 // should be used in stead.
 
 function shouldUseMemory(prevProps: any, nextProps: any) {
-  return prevProps.show === nextProps.show && nextProps.children === prevProps.children;
+  return (
+    prevProps.show === nextProps.show &&
+    nextProps.children === prevProps.children
+  );
 }
 
 export default React.memo(Modal, shouldUseMemory);

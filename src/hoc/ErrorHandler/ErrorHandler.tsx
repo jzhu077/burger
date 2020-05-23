@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Auxiliary from "../Auxiliary/Auxiliary";
 import Modal from "../../components/UI/Modal/Modal";
-import {
-  AxiosInstance,
-  AxiosRequestConfig
-} from "axios";
+import { AxiosInstance, AxiosRequestConfig } from "axios";
 
 export const ErrorHandler = (WrappedComponent: any, axios: AxiosInstance) => {
   return class extends Component {

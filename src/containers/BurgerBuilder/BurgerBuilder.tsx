@@ -80,7 +80,7 @@ class BurgerBuilder extends Component {
 
     (this.props as RouteComponentProps).history.push({
       pathname: "/checkout",
-      search: '?'+queryString
+      search: "?" + queryString
     });
   };
 
