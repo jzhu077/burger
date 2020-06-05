@@ -5,6 +5,7 @@ import { IIngredients } from "../../../types/burger";
 import { Axios } from "../../../axios";
 import { Spinner } from "../../../components/UI/Spinner/Spinner";
 import * as H from "history";
+import { Input } from "../../../components/UI/Input/Input";
 
 class ContactData extends Component<{
   ingredients: IIngredients;
@@ -49,26 +50,26 @@ class ContactData extends Component<{
   render() {
     let form = (
       <form>
-        <input
-          className={styles.Input}
+        <Input
+          inputtype="input"
           type="text"
           name="name"
           placeholder="Your Name"
         />
-        <input
-          className={styles.Input}
+        <Input
+          inputtype="input"
           type="text"
           name="email"
           placeholder="Your Email"
         />
-        <input
-          className={styles.Input}
+        <Input
+          inputtype="input"
           type="text"
           name="street"
           placeholder="Street"
         />
-        <input
-          className={styles.Input}
+        <Input
+          inputtype="input"
           type="text"
           name="postal"
           placeholder="Postal Code"
