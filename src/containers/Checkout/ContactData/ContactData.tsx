@@ -7,19 +7,62 @@ import { Spinner } from "../../../components/UI/Spinner/Spinner";
 import * as H from "history";
 import { Input } from "../../../components/UI/Input/Input";
 
+type dictionary = {
+  [key: string]: elementConfig;
+};
+
+type elementConfig = {
+  elementType: string;
+  elementConfig: {
+    type?: string;
+    placeholder?: string;
+    options?: { value: string; displayValue: string }[];
+  };
+  value: string;
+};
+
 class ContactData extends Component<{
   ingredients: IIngredients;
   price: number;
   history: H.History;
 }> {
   state = {
-    name: "",
-    email: "",
-    address: {
-      street: "",
-      postalCode: ""
-    },
-
+    orderForm: {
+      name: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Your Name"
+        },
+        value: ""
+      },
+      address: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Address"
+        },
+        value: ""
+      },
+      email: {
+        elementType: "input",
+        elementConfig: {
+          type: "email",
+          placeholder: "E-mail"
+        },
+        value: ""
+      },
+      deliveryMethod: {
+        elementType: "select",
+        elementConfig: {
+          options: [
+            { value: "fastest", displayValue: "Fastest" },
+            { value: "cheapest", displayValue: "Cheapest" }
+          ]
+        },
+        value: ""
+      }
+    } as dictionary,
     loading: false
   };
 
@@ -48,32 +91,28 @@ class ContactData extends Component<{
   };
 
   render() {
+    const formElementArray = [] as { id: string; config: elementConfig }[];
+    for (let key in this.state.orderForm) {
+      formElementArray.push({
+        id: key,
+        config: this.state.orderForm[key]
+      });
+    }
     let form = (
       <form>
-        <Input
-          inputtype="input"
-          type="text"
-          name="name"
-          placeholder="Your Name"
-        />
-        <Input
-          inputtype="input"
-          type="text"
-          name="email"
-          placeholder="Your Email"
-        />
-        <Input
-          inputtype="input"
-          type="text"
-          name="street"
-          placeholder="Street"
-        />
-        <Input
-          inputtype="input"
-          type="text"
-          name="postal"
-          placeholder="Postal Code"
-        />
+        {formElementArray.map(elem => {
+          const {
+            config: { elementType, elementConfig, value }
+          } = elem;
+          return (
+            <Input
+              key={elem.id}
+              elementType={elementType}
+              elementConfig={elementConfig}
+              value={value}
+            />
+          );
+        })}
 
         <Button btnType="Success" clicked={this.orderHandler}>
           ORDER
