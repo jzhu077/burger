@@ -3,7 +3,7 @@ import * as styles from "./Button.css";
 
 const Button = (props: {
   btnType: "Success" | "Danger";
-  clicked: any;
+  clicked?: any;
   children: any;
 }) => (
   <button
