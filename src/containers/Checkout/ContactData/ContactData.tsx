@@ -11,7 +11,7 @@ type dictionary = {
   [key: string]: elementConfig;
 };
 
-type elementConfig = {
+export type elementConfig = {
   elementType: string;
   elementConfig: {
     type?: string;
@@ -90,6 +90,14 @@ class ContactData extends Component<{
       });
   };
 
+  inputChangedHandler = (event: any, inputIdentifier: string) => {
+    const updatedForm = { ...this.state.orderForm };
+    const updatedFormElement = { ...updatedForm[inputIdentifier] };
+    updatedFormElement.value = event.target.value;
+    updatedForm[inputIdentifier] = updatedFormElement;
+    this.setState({ orderForm: updatedForm });
+  };
+
   render() {
     const formElementArray = [] as { id: string; config: elementConfig }[];
     for (let key in this.state.orderForm) {
@@ -110,6 +118,7 @@ class ContactData extends Component<{
               elementType={elementType}
               elementConfig={elementConfig}
               value={value}
+              changed={event => this.inputChangedHandler(event, elem.id)}
             />
           );
         })}
