@@ -14,7 +14,6 @@ type dictionary = {
 type validationRules = {
   required?: boolean;
   minLength?: number;
-  valid: boolean;
 };
 
 export type elementConfig = {
@@ -26,6 +25,8 @@ export type elementConfig = {
   };
   value: string;
   validation?: validationRules;
+  isValid: boolean;
+  touched?: boolean;
 };
 
 class ContactData extends Component<{
@@ -44,9 +45,10 @@ class ContactData extends Component<{
         value: "",
         validation: {
           required: true,
-          minLength: 3,
-          valid: true
-        }
+          minLength: 3
+        },
+        isValid: false,
+        touched: false
       },
       address: {
         elementType: "input",
@@ -56,9 +58,10 @@ class ContactData extends Component<{
         },
         value: "",
         validation: {
-          required: true,
-          valid: true
-        }
+          required: true
+        },
+        isValid: false,
+        touched: false
       },
       email: {
         elementType: "input",
@@ -68,9 +71,10 @@ class ContactData extends Component<{
         },
         value: "",
         validation: {
-          required: true,
-          valid: true
-        }
+          required: true
+        },
+        isValid: false,
+        touched: false
       },
       deliveryMethod: {
         elementType: "select",
@@ -82,9 +86,9 @@ class ContactData extends Component<{
         },
         value: "",
         validation: {
-          required: false,
-          valid: true
-        }
+          required: false
+        },
+        isValid: true
       }
     } as dictionary,
     loading: false
@@ -135,12 +139,12 @@ class ContactData extends Component<{
     const updatedFormElement = { ...updatedForm[inputIdentifier] };
     updatedFormElement.value = event.target.value;
     if (updatedFormElement.validation) {
-      updatedFormElement.validation.valid = this.checkValidity(
+      updatedFormElement.isValid = this.checkValidity(
         updatedFormElement.value,
         updatedFormElement.validation
       );
     }
-    console.log(updatedFormElement.validation);
+    updatedFormElement.touched = true;
     updatedForm[inputIdentifier] = updatedFormElement;
     this.setState({ orderForm: updatedForm });
   };
@@ -157,7 +161,7 @@ class ContactData extends Component<{
       <form onSubmit={this.orderHandler}>
         {formElementArray.map(elem => {
           const {
-            config: { elementType, elementConfig, value }
+            config: { elementType, elementConfig, value, isValid, touched }
           } = elem;
           return (
             <Input
@@ -166,6 +170,8 @@ class ContactData extends Component<{
               elementConfig={elementConfig}
               value={value}
               changed={event => this.inputChangedHandler(event, elem.id)}
+              isValid={isValid}
+              touched={touched}
             />
           );
         })}
