@@ -11,6 +11,12 @@ type dictionary = {
   [key: string]: elementConfig;
 };
 
+type validationRules = {
+  required?: boolean;
+  minLength?: number;
+  valid: boolean;
+};
+
 export type elementConfig = {
   elementType: string;
   elementConfig: {
@@ -19,6 +25,7 @@ export type elementConfig = {
     options?: { value: string; displayValue: string }[];
   };
   value: string;
+  validation?: validationRules;
 };
 
 class ContactData extends Component<{
@@ -34,7 +41,12 @@ class ContactData extends Component<{
           type: "text",
           placeholder: "Your Name"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true,
+          minLength: 3,
+          valid: true
+        }
       },
       address: {
         elementType: "input",
@@ -42,7 +54,11 @@ class ContactData extends Component<{
           type: "text",
           placeholder: "Address"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true,
+          valid: true
+        }
       },
       email: {
         elementType: "input",
@@ -50,7 +66,11 @@ class ContactData extends Component<{
           type: "email",
           placeholder: "E-mail"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true,
+          valid: true
+        }
       },
       deliveryMethod: {
         elementType: "select",
@@ -60,7 +80,11 @@ class ContactData extends Component<{
             { value: "cheapest", displayValue: "Cheapest" }
           ]
         },
-        value: ""
+        value: "",
+        validation: {
+          required: false,
+          valid: true
+        }
       }
     } as dictionary,
     loading: false
@@ -92,10 +116,31 @@ class ContactData extends Component<{
       });
   };
 
+  checkValidity = (value: string, rules: validationRules): boolean => {
+    let isValid = true;
+
+    if (rules.required) {
+      isValid = value.trim() !== "" && isValid;
+    }
+
+    if (rules.minLength) {
+      isValid = value.length >= rules.minLength && isValid;
+    }
+
+    return isValid;
+  };
+
   inputChangedHandler = (event: any, inputIdentifier: string) => {
     const updatedForm = { ...this.state.orderForm };
     const updatedFormElement = { ...updatedForm[inputIdentifier] };
     updatedFormElement.value = event.target.value;
+    if (updatedFormElement.validation) {
+      updatedFormElement.validation.valid = this.checkValidity(
+        updatedFormElement.value,
+        updatedFormElement.validation
+      );
+    }
+    console.log(updatedFormElement.validation);
     updatedForm[inputIdentifier] = updatedFormElement;
     this.setState({ orderForm: updatedForm });
   };
