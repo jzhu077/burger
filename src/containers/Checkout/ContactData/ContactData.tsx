@@ -91,7 +91,8 @@ class ContactData extends Component<{
         isValid: true
       }
     } as dictionary,
-    loading: false
+    loading: false,
+    isFormValid: false
   };
 
   orderHandler = (event: any) => {
@@ -146,7 +147,11 @@ class ContactData extends Component<{
     }
     updatedFormElement.touched = true;
     updatedForm[inputIdentifier] = updatedFormElement;
-    this.setState({ orderForm: updatedForm });
+    let isFormValid = true;
+    for (let inputIdentifier in updatedForm) {
+      isFormValid = updatedForm[inputIdentifier].isValid && isFormValid;
+    }
+    this.setState({ orderForm: updatedForm, isFormValid });
   };
 
   render() {
@@ -176,7 +181,9 @@ class ContactData extends Component<{
           );
         })}
 
-        <Button btnType="Success">ORDER</Button>
+        <Button btnType="Success" disabled={!this.state.isFormValid}>
+          ORDER
+        </Button>
       </form>
     );
     if (this.state.loading) {
