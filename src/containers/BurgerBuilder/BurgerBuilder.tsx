@@ -35,13 +35,13 @@ class BurgerBuilder extends Component {
 
   componentDidMount(): void {
     this.setState({ loading: true });
-    Axios.get("/ingredients.json")
-      .then(resp => {
-        this.setState({ ingredients: resp.data, loading: false });
-      })
-      .catch(err => {
-        this.setState({ hasError: true });
-      });
+    // Axios.get("/ingredients.json")
+    //   .then(resp => {
+    //     this.setState({ ingredients: resp.data, loading: false });
+    //   })
+    //   .catch(err => {
+    //     this.setState({ hasError: true });
+    //   });
   }
 
   orderCancelled = () => {
